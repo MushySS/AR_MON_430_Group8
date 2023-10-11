@@ -7,29 +7,34 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Roboto:wght@100;400;500;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <!-- Style Sheet -->
     <style>
-        *{
-            font-family: 'Roboto', sans-serif;
-        }
-        .h-font{
-            font-family: 'Croissant One', cursive;
-        }
-        /* Chrome, Safari, Edge, Opera */
-        input::-webkit-outer-spin-button,
-        input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
+        .check-form{
+           margin-top: -50px; 
+           z-index: 2;
+           position: relative;
         }
 
-        /* Firefox */
-        input[type=number] {
-        -moz-appearance: textfield;
+        @media screen and (max-width:575px){
+            .check-form{
+                margin-top: 0px;
+            }
         }
+
+        /* body{
+            background-size: cover;
+            background-image:url("asset/map.jpg");
+        }
+         */
 
     </style>
 </head>
-<body>
-    
+
+<!-- Content -->
+<body class="bg-light ">
+    <!-- NavBar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
         <div class="container-fluid">
           <a class="navbar-brand me-5 dw-bold fs-3 h-font" href="index.html">WanderBook</a>
@@ -65,9 +70,22 @@
         </div>
     </nav>
 
-    <img src="asset/map.jpg" class="img-fluid" alt="Map pic">
+    <!-- <img src="asset/map.jpg" class="img-fluid" alt="Map pic"> -->
 
-      <!-- Modal for login -->
+    <!-- <div class="position-absolute bottom-40 start-30">
+        <div>
+            <button type="button" class="btn btn-primary btn-lg">Large button</button>
+        </div>
+    </div> -->
+
+
+
+
+
+
+
+
+    <!-- Modal for login -->
     <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -99,7 +117,7 @@
         </div>
     </div>
       
-      <!-- Modal for register -->
+    <!-- Modal for register -->
     <div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -187,7 +205,250 @@
             </div>
         </div>
     </div>
+
+    <!-- Swipper JS carousel -->
+    <div class="container-fluid px-lg-4 mt-4">
+        <div class="swiper swiper-container">
+            <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="asset/resize/resize_hiking2.jpg" class="w-100 d-block">
+            </div>
+            <div class="swiper-slide">
+                <img src="asset/resize/resize_city-skyline1.jpg" class="w-100 d-block">
+            </div>
+            <div class="swiper-slide">
+                <img src="asset/resize/resize_beach.jpg" class="w-100 d-block">
+            </div>
+            <div class="swiper-slide">
+                <img src="asset/resize/resize_palms.jpg" class="w-100 d-block">
+            </div>
+        </div>
+    </div>
+
+    <!-- Check in form-->
+
+    <div class="container check-form">
+        <div class="row">
+            <div class="col-lg-12 bg-white shadow p-4 rounded">
+                <h5 class="mb-4">Check In Form</h5>
+                <form>
+                <div class="row align-items-end">
+                    <div class="col-lg-3 mb-3">
+                        <label class="form-label" style="font-weight: 500;">Check-In Date</label>
+                        <input type="date" class="form-control shadow-none">
+                    </div>
+                    <div class="col-lg-3 mb-3">
+                        <label class="form-label" style="font-weight: 500;">Check-Out Date</label>
+                        <input type="date" class="form-control shadow-none">
+                    </div>
+                    <div class="col-lg-3 mb-3">
+                        <label class="form-label" style="font-weight: 500;">Adults</label>
+                        <select class="form-select shadow-none">
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-2 mb-3">
+                        <label class="form-label" style="font-weight: 500;">Children</label>
+                        <select class="form-select shadow-none">
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-1 mb-lg-3 mt-2">
+                        <button type="submit" class="btn text-white shadow-none custom-bg">Submit</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
     
+    <!-- Our acitivities-->
+    <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Our Activities</h2>
+    
+    <!-- Card Container-->
+    <div class="container">
+        <div class="row">
+
+            <!-- Card One -->
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card vorder-0 shadow" style="max-width: 350px; margin: auto;">
+                    <img src="asset/resize/resize_beach.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5>Activity Name</h5>
+                        <h6 class="mb-4">$150 pp</h6>
+                        <div class="features mb-4">
+                            <h6 class="mb-1">Features</h6>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                2 Rooms
+                            </span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                1 Bathroom
+                            </span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                1 Balcony
+                            </span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                2 Sofa
+                            </span>
+                        </div>
+                        <div class="facilities mb-4">
+                            <h6 class="mb-1">Facilities</h6>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                Wifi
+                            </span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                TV
+                            </span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                AC
+                            </span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                Fireplace
+                            </span>
+                        </div>
+                        <div class="rating mb-4">
+                            <h6 class="mb-1">Rating</h6>
+                            <span class="badge rounded bg-light"></span>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <div class="d-flex justify-content-evenly mb-2">
+                            <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Book Now</a>
+                            <a href="#" class="btn btn-sm btn-outline-dark cutom-bg shadow-none">More details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Two -->
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card vorder-0 shadow" style="max-width: 350px; margin: auto;">
+                    <img src="asset/resize/resize_beach.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5>Activity Name</h5>
+                        <h6 class="mb-4">$150 pp</h6>
+                        <div class="features mb-4">
+                            <h6 class="mb-1">Features</h6>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                2 Rooms
+                            </span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                1 Bathroom
+                            </span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                1 Balcony
+                            </span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                2 Sofa
+                            </span>
+                        </div>
+                        <div class="facilities mb-4">
+                            <h6 class="mb-1">Facilities</h6>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                Wifi
+                            </span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                TV
+                            </span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                AC
+                            </span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                Fireplace
+                            </span>
+                        </div>
+                        <div class="rating mb-4">
+                            <h6 class="mb-1">Rating</h6>
+                            <span class="badge rounded bg-light"></span>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <div class="d-flex justify-content-evenly mb-2">
+                            <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Book Now</a>
+                            <a href="#" class="btn btn-sm btn-outline-dark cutom-bg shadow-none">More details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Three -->
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card vorder-0 shadow" style="max-width: 350px; margin: auto;">
+                    <img src="asset/resize/resize_beach.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5>Activity Name</h5>
+                        <h6 class="mb-4">$150 pp</h6>
+                        <div class="features mb-4">
+                            <h6 class="mb-1">Features</h6>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                2 Rooms
+                            </span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                1 Bathroom
+                            </span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                1 Balcony
+                            </span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                2 Sofa
+                            </span>
+                        </div>
+                        <div class="facilities mb-4">
+                            <h6 class="mb-1">Facilities</h6>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                Wifi
+                            </span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                TV
+                            </span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                AC
+                            </span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                Fireplace
+                            </span>
+                        </div>
+                        <div class="rating mb-4">
+                            <h6 class="mb-1">Rating</h6>
+                            <span class="badge rounded bg-light"></span>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                        </div>
+                        <div class="d-flex justify-content-evenly mb-2">
+                            <a href="#" class="btn btn-sm text-white custom-bg shadow-none">Book Now</a>
+                            <a href="#" class="btn btn-sm btn-outline-dark cutom-bg shadow-none">More details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12 text-center mt-5"></div>
+                <a href="#" class="btn btn-sm btn-outline-dark rounded-0 fw-bold shadow-none">More Activities</a>
+            </div>
+    </div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".swiper-container", {
+        spaceBetween: 30,
+        effect: "fade",
+        loop:true,
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        }
+        });
+    </script>
 </body>
 </html>
