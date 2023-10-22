@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+}
+
+.wrapper {
+    height:500px
+}
+
+.container {
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: #fff;   
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 300px;
+    height:600px;
+}
+
+.container .form {
+    width: 50%;
+    padding: 30px;
+    background-color: #fff;
+}
+
+.container.active .login {
+    margin-left: -50%;
+    opacity: 0;
+}
+
+
+.container .forms {
+    display: flex;
+    height:440px;
+    align-items: center;
+    width:200%;
+    /* background-color: red; */
+    transition: height 0.2 ease;
+}
+
+.container .form .title {
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.form .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-image: linear-gradient(to right, #E23CBF, #F86930);;
+    border-radius: 25px;
+}
+
+.form .input-field {
+    margin-top: 30px;
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.form .input-fields {
+    margin-top: 30px;
+    position: flex;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.input-field input {
+    position: absolute;
+    height:100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    font-size: 16px;
+}
+
+.input-field input:is(:focus, :valid) {
+    border-bottom-color: #cf3c0b;
+}
+
+.input-field input:is(:focus, :valid) ~i {
+    color: #cf3c0b
+}
+
+.input-field i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+}
+
+.input-field .showHidePw {
+    cursor:pointer;
+    right:0;
+}
+
+.input-field i.icon{
+    left: 0;
+}
+
+.form .checkbox-password {
+    display: flex;
+    justify-content: space-between;
+    margin-top:30px;
+}
+
+.form .checkbox-hub {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form .checkbox-content input {
+    margin: 0 8px -2px 4px;
+    accent-color: #cf3c0b;
+}
+
+.form a {
+    text-decoration: none;
+}
+
+.form a:hover {
+    text-decoration: underline;
+}
+
+.form .input-field-button {
+    margin-top: 30px;
+}
+
+.form .log-now {
+    border: none;
+    background-image: linear-gradient(to right, #E23CBF, #F86930);
+    border-radius: 6px;
+    font-size: 20px;
+    color:white;
+    margin-top:20px;
+
+}
+
+.form .log-now:hover {
+    box-shadow: rgba(161, 38, 38, 0.5) 0 1px 30px;
+}
+
+.form .log-now:hover {
+    background-color: rgba(0,2,3,0.5)
+}
+
+ .container .signup-link {
+    margin-top: 30px;
+    text-align: center;
+ }
+
+ * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+/* icon sizing */
+.fa, .fas {
+    margin: 0 5px 0 5px;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+/* font changing for mid nav category */
+#sub-menu{
+    opacity: .85;
+    margin-left: 20px;
+    font-size: 14px;
+    color: #0f136d;
+    letter-spacing: 0;
+    line-height: 40px;
+    font-weight: 800;
+    font-family: Roboto-Regular,'Helvetica Neue',Helvetica,Tahoma,Arial,Sans-serif;
+}
+
+
+/* Windows PC Computer  */
+@media only screen and (min-width: 1024px) and (max-width: 1980px) {
+    .filter-column {
+        margin-left: 18.88%;
+    }
+    .product-column {
+        width: 52%;
+    }
+    .inner-footer {
+        margin-left: 19%;
+        margin-right: 19%;
+    }
+}
+/* media query for tablets */
+@media only screen and (min-width:768px) and (max-width:1023px) {
+    .linkbar {
+        width: 100%;
+    }
+    .linkbar ul {
+        margin: 0 !important;
+    }
+    .logo-content {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+    .nav-search {
+        width: 50% !important;
+        padding-left: 50% !important; 
+    }
+    .row {
+        width: 50%;
+        padding-left: 50%;
+    }
+    .filter-column {
+        margin-left: 7.5%;
+    }
+    .product-column {
+        width: 100%;
+    }
+    .product-item {
+        width: 200px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .linkbar {
+        display: none;
+    }
+    .logo-content {
+        width: 0%;
+    }
+    .promo {
+        display: none;
+    }
+    .filter-column {
+        margin: 0 !important;
+        margin-left: 10px !important;
+    }
+    .filter-btn {
+        width: 53px !important;
+    }
+    .nav-search {
+        width: 100%;
+    }
+    .mid-nav, .breadcrumb-list {
+        display: none;
+    }
+    .row {
+        display: none;
+    }
+    footer {
+        min-width: 0;
+    }
+    .footer-first {
+        margin-top: 40vh;
+    }
+    .inner-footer {
+        margin: 0;
+    }
+    .footer-width25 {
+        width: 50%;
+    }
+}
+
+.echo-css {
+    color: red;
+    text-align:center;
+    margin-top: 74vh;
+    z-index: 99;
+    position: absolute;
+}
+
+.error {
+    background: #F2DEDE;
+    color: #A94442;
+    padding: 10px;
+    width: 95%;
+    border-radius: 5px;
+    margin: 20px auto;
+ }
+ 
